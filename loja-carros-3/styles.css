@@ -11,14 +11,6 @@ body {
   color: #333;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 20px;
-  color: #000000;
-}
-
 .logo-title {
   display: flex;
   align-items: center;
@@ -35,7 +27,7 @@ h1 {
 }
 
 .menu {
-  display: flex;
+  display: grid;
   gap: 15px;
   margin-left: 35%;
 }
@@ -48,7 +40,6 @@ h1 {
   border-radius: 5px;
   font-size: 14px;
 }
-
 
 .grid-container {
   display: grid;
@@ -63,7 +54,6 @@ h1 {
   display: flex;
   background-color: #000;
   color: #fff;
-  overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: left;
   height: 230px;
@@ -79,7 +69,7 @@ h1 {
   width: 45%;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
+  justify-content: center;
 }
 
 .info strong {
@@ -94,4 +84,128 @@ button {
   color: #000;
   border-radius: 5px;
   font-size: 14px;
+}
+/* Mobile */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .card {
+    display: block;
+    background-color: #000;
+    color: #fff;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    width: auto;
+    height: auto;
+  }
+
+  .info {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    margin-bottom: 10%;
+  }
+
+  .car-image {
+    max-height: 40%;
+    width: 90%;
+    margin-bottom: 0;
+  }
+  .logo {
+    display: block;
+    margin: 0 auto;
+  }
+  .logo-title {
+    display: block;
+    margin: 10px auto;
+  }
+  .logo-title h1 {
+    text-align: center;
+  }
+  .menu {
+    grid-template-columns: repeat(2, 1fr);
+    margin: 10%;
+  }
+}
+/* Tablet */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .menu-container {
+    display: flex;
+    padding: 20px;
+  }
+
+  .logo-title {
+    margin: 0 auto;
+  }
+  .menu {
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 100;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .card {
+    display: block;
+    height: fit-content;
+    padding: 10px;
+  }
+  .info {
+    width: auto;
+    height: auto;
+  }
+  .car-image {
+    display: block;
+    width: 90%;
+  }
+}
+/* Laptop */
+@media screen and (min-width: 769px){
+  .menu-container {
+    display: flex;
+    padding: 20px;
+  }
+
+  .logo-title {
+    margin: 0 auto;
+  }
+  .menu {
+    height: 20%;
+    margin: 5%;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 100;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .card {
+    display: block;
+    height: fit-content;
+    padding: 10px;
+  }
+  .info {
+    width: auto;
+    height: auto;
+  }
+  .car-image {
+    display: block;
+    width: 90%;
+  }
 }
